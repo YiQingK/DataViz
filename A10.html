@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 10 graphs</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+
+    <style>
+        .column {
+            float: left;
+            width: 40%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="column">
+        <img src="images/black1.jpeg" style="height:300px">
+        <p>This data visualization is bad as:</p>
+        <ul>
+            <li>There is no reason/justification for why circles are used to represent the values</li>
+            <li>It is hard for people to compare areas of circles</li>
+            <li>As the circles got bigger in US' chart, they begin to overlap which can interfere with reading it</li>
+        </ul>
+        <img src="images/black2.jpeg" style="height:450px">
+        <p>This data visualization is bad as:</p>
+        <ul>
+            <li>Length of bars is misleading (Length is based on their position instead of points)</li>
+            <li>Difficult to compare points change between the two years</li>
+            <li>Graph is very busy - A lot of unnecessary ink</li>
+        </ul>
+        <div id="black3">
+
+        </div>
+    </div>
+
+
+    <div class="column">
+        <img src="images/white1.png" style="height:300px">
+        <p>This data visualization is better as:</p>
+        <ul>
+            <li>A trend over time can be easily seen </li>
+            <li>The difference between USA or Europe is easily identifiable and compared</li>
+        </ul>
+        <br/>
+        <br/>
+        <br/>
+        <div id="white2">
+            <script src="d3/A10B.js"></script>
+        </div>
+        <p>This data visualization is better as:</p>
+        <ul>
+            <li>Comparison between the two years are clearer</li>
+            <li>Length of bar corresponds to number of points earned</li>
+            <li>Despite not having the rankings, the difference in points allows for it to be clear</li>
+        </ul>
+        <div id="white3">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
