@@ -18,6 +18,13 @@ svg_w.append("text")
     .attr("font-size","15px")
     .text("Number of kills in VALORANT Masters 2021");
 
+/*Create source text*/
+svg_w.append("text")
+    .attr("x",100)
+    .attr("y",375)
+    .attr("font-size","10px")
+    .text("Data from kaggle dataset: VALORANT Masters 2021: Player & Map Data");
+
 
 var xScale_w = d3.scaleLinear().range([0,width]);
 var yScale_w = d3.scaleBand().range([height,0]);
@@ -63,6 +70,8 @@ d3.csv("d3/player_stats.csv").then(function(data){
         .attr("y",30)
         .attr("fill", "black")
         .text("Kills");
+
+
 
     // Add Y axis
     svg_w.append("g")

@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
-const margin = {top: 50, right: 30, bottom: 20, left: 50},
+const margin = {top: 50, right: 30, bottom: 30, left: 50},
     width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    height = 410 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 const svg = d3.select("#white2")
@@ -42,13 +42,24 @@ d3.csv("d3/data.csv").then( function(data) {
         .padding([0.2])
     container_g.append("g")
         .attr("transform", `translate(0, ${height})`)
-        .call(d3.axisBottom(xScale).tickSize(0));
+        .call(d3.axisBottom(xScale).tickSize(0))
+        .append("text")
+        .attr("y",25)
+        .attr("x",175)
+        .attr("fill", "black")
+        .text("data taken from formula1.com");
 
     // Add Y axis
     yScale
         .domain([0,110])
     container_g.append("g")
-        .call(d3.axisLeft(yScale));
+        .call(d3.axisLeft(yScale))
+        .append("text")
+        .attr("transform","rotate(-90)")
+        .attr("y",-30)
+        .attr("x",-125)
+        .attr("fill", "black")
+        .text("points");
 
     // Another scale for subgroup position?
     xScale2
